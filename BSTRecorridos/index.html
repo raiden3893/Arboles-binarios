@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Informe: Árbol Binario de Búsqueda (BST) – Recorridos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <!-- ===================== Portada ===================== -->
+  <section class="portada">
+    <h1>INSTRUMENTO DE EVALUACIÓN – Árboles Binarios</h1>
+    <h2>Caso de estudio y demostración de recorridos</h2>
+    <p><b>Recorridos solicitados:</b> Anchura (BFS), Preorden, Inorden, Postorden</p>
+    <div class="meta">
+      <div><b>Asignatura:</b> Estructura de Datos</div>
+      <div><b>Alumno:</b> (tu nombre aquí)</div>
+      <div><b>Fecha:</b> (dd/mm/aaaa)</div>
+      <div><b>Folio/Ref.:</b> F-SGC-033 (Referencia del formato)</div>
+    </div>
+  </section>
+
+  <!-- ===================== Resumen ===================== -->
+  <section class="card">
+    <h3>Resumen del caso</h3>
+    <p>
+      Se implementa un <b>Árbol Binario de Búsqueda (BST)</b> para gestionar un conjunto de IDs
+      (por ejemplo, cursos/asignaturas) y auditar su estructura mediante los recorridos
+      exigidos por el instrumento: <b>Anchura (BFS)</b> y <b>Profundidad</b> en sus variantes
+      <b>Preorden</b>, <b>Inorden</b> y <b>Postorden</b>. Se incluyen “imágenes con datos” (ASCII),
+      resultados esperados y <b>casos de prueba automáticos</b>.
+    </p>
+  </section>
+
+  <!-- ===================== Interfaz ===================== -->
+  <section class="grid">
+    <div class="card">
+      <h3>1) Construcción del árbol</h3>
+      <p>Escribe enteros separados por coma. Ejemplo: <code>8,3,10,1,6,14,4,7,13</code></p>
+
+      <div class="row">
+        <div class="grow">
+          <label for="txtValores">Valores (separados por coma)</label>
+          <input id="txtValores" type="text" placeholder="8,3,10,1,6,14,4,7,13" />
+        </div>
+        <div class="actions">
+          <button id="btnConstruir" class="primary">Construir BST</button>
+          <button id="btnLimpiar" class="ghost">Limpiar</button>
+        </div>
+      </div>
+
+      <div class="chips">
+        <span class="tag">Atajos</span>
+        <button id="btnArbolA">Cargar Árbol A</button>
+        <button id="btnArbolB">Cargar Árbol B</button>
+        <button id="btnProbar" title="Ejecuta asserts para A y B">Correr pruebas</button>
+      </div>
+
+      <h4>2) “Imágenes con datos” (ASCII)</h4>
+      <pre id="ascii"></pre>
+
+      <h4>3) Recorridos</h4>
+      <div class="kpi">
+        <div><b>BFS</b><div id="outBFS" class="out"></div></div>
+        <div><b>Preorden</b><div id="outPre" class="out"></div></div>
+        <div><b>Inorden</b><div id="outIn" class="out"></div></div>
+        <div><b>Postorden</b><div id="outPost" class="out"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Guía de evidencias (para tu documento)</h3>
+      <ol>
+        <li><b>Imagen 1 – Código:</b> captura de <code>js/bst.js</code> con los métodos <code>bfs</code>, <code>preorden</code>, <code>inorden</code>, <code>postorden</code>.</li>
+        <li><b>Imagen 2 – Árbol A:</b> captura del ASCII “A” y bajo él los resultados de BFS/Pre/In/Post.</li>
+        <li><b>Imagen 3 – Árbol B:</b> captura del ASCII “B” y sus resultados.</li>
+        <li><b>Imagen 4 – Pruebas:</b> alerta de “✔ Todas las pruebas pasaron…” o capturas de consola.</li>
+      </ol>
+      <hr />
+      <p><b>Notas:</b> Inorden en BST produce valores en orden ascendente. BFS usa una cola. Pre/Posorden emplean recursión (pila implícita).</p>
+    </div>
+  </section>
+
+  <!-- ===================== Scripts (módulos ES) ===================== -->
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
